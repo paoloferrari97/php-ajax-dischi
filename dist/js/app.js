@@ -22,11 +22,10 @@ var app = new Vue({
         _this.dischi = [];
 
         for (var i = 0; i < resp.data.length; i++) {
-          if (resp.data.genre == _this.genere || _this.genere == 'Tutti') {
+          if (resp.data[i].genre == _this.genere || _this.genere == 'Tutti') {
             _this.dischi.push(resp.data[i]);
           }
-        } //this.dischi = resp.data;
-
+        }
       })["catch"](function (e) {
         console.log(e);
       });

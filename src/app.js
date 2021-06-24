@@ -12,11 +12,10 @@ const app = new Vue({
             //console.log(resp);            
             this.dischi = [];
             for (var i = 0; i < resp.data.length; i++){
-                if (resp.data.genre == this.genere || this.genere == 'Tutti') {
+                if (resp.data[i].genre == this.genere || this.genere == 'Tutti') {
                     this.dischi.push(resp.data[i]);
                 }
             }
-            //this.dischi = resp.data;
         })
         .catch(e => {
             console.log(e);

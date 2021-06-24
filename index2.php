@@ -3,7 +3,7 @@
 Attraverso l’utilizzo di axios: al caricamento della pagina axios chiederà, 
 attraverso una chiamata api, i dischi a php e li stamperà attraverso vue. */
 
-@require __DIR__ . './dist/templates/database.php';
+@require __DIR__ . '/dist/templates/database.php';
 
 ?>
 

@@ -2,7 +2,7 @@
 /* Bonus: 
 Attraverso un’altra chiamata api, filtrare gli album per genere */
 
-@require __DIR__ . './dist/templates/database.php';
+@require __DIR__ . '/dist/templates/database.php';
 
 ?>
 

@@ -24,6 +24,29 @@ header > i {
   border-radius: 50%;
 }
 
+#seleziona {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#seleziona > label {
+  color: white;
+}
+
+#genere {
+  margin-left: 30px;
+  height: 30px;
+  width: 100px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #1ed760;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+}
+
 .container {
   padding-top: 100px;
   display: flex;

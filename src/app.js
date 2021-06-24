@@ -1,7 +1,8 @@
 const app = new Vue({
     el: "#app",
     data: {
-        dischi:[]
+        dischi: [],
+        genere: "Tutti"
     },
     methods: {
         
@@ -10,7 +11,7 @@ const app = new Vue({
         axios
         .get("./dist/api/database_api.php")
         .then(resp => {
-            console.log(resp);
+            //console.log(resp);            
             this.dischi = resp.data;
         })
         .catch(e => {

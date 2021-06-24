@@ -36,20 +36,12 @@ attraverso una chiamata api, i dischi a php e li stamperà attraverso vue. */
 
         <div class="container">
 
-            <?php
-            foreach ($dischi as $disco) {
-            ?>
-
-            <div class="card">
-                <img src="<?php echo $disco["poster"]; ?>" alt="">
-                <h2 class="titolo"><?php echo $disco["title"]; ?></h2>
-                <span class="scritte"><?php echo $disco["author"]; ?></span>
-                <span class="scritte"><?php echo $disco["year"]; ?></span>
+            <div class="card" v-for="disco in dischi">
+                <img :src="disco.poster" alt="">
+                <h2 class="titolo">{{disco.title.toUpperCase()}}</h2>
+                <span class="scritte">{{disco.author}}</span>
+                <span class="scritte">{{disco.year}}</span>
             </div>
-
-            <?php
-            }
-            ?>
 
         </div>
 

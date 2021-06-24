@@ -13,13 +13,31 @@ var app = new Vue({
     dischi: [],
     genere: "Tutti"
   },
-  methods: {},
+  methods: {
+    filtra: function filtra() {
+      var _this = this;
+
+      axios.get("./dist/api/database_api.php").then(function (resp) {
+        //console.log(resp);            
+        _this.dischi = [];
+
+        for (var i = 0; i < resp.data.length; i++) {
+          if (resp.data.genre == _this.genere || _this.genere == 'Tutti') {
+            _this.dischi.push(resp.data[i]);
+          }
+        } //this.dischi = resp.data;
+
+      })["catch"](function (e) {
+        console.log(e);
+      });
+    }
+  },
   mounted: function mounted() {
-    var _this = this;
+    var _this2 = this;
 
     axios.get("./dist/api/database_api.php").then(function (resp) {
       //console.log(resp);            
-      _this.dischi = resp.data;
+      _this2.dischi = resp.data;
     })["catch"](function (e) {
       console.log(e);
     });

@@ -37,7 +37,7 @@ Attraverso un’altra chiamata api, filtrare gli album per genere */
             <label for="genere">
                 <h2>Seleziona un genere:</h2>
             </label>
-            <select name="genere" id="genere" v-model="genere">
+            <select name="genere" id="genere" v-model="genere" @click="filtra()">
                 <option value="Tutti">Tutti</option>
                 <option value="Rock">Rock</option>
                 <option value="Pop">Pop</option>
@@ -48,7 +48,8 @@ Attraverso un’altra chiamata api, filtrare gli album per genere */
 
         <div class="container">
 
-            <div class="card" v-for="disco in dischi" v-if="disco.genre == genere || genere == 'Tutti'">
+            <div class="card" v-for="disco in dischi">
+                <!-- v-if="disco.genre == genere || genere == 'Tutti'" -->
                 <img :src="disco.poster" alt="">
                 <h2 class="titolo">{{disco.title.toUpperCase()}}</h2>
                 <span class="scritte">{{disco.author}}</span>

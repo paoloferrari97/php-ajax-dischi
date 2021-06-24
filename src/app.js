@@ -8,7 +8,7 @@ const app = new Vue({
     },
     mounted() {
         axios
-        .get("./api/database_api.php")
+        .get("./dist/api/database_api.php")
         .then(resp => {
             console.log(resp);
             this.dischi = resp.data;
